@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Конвертация единиц измерения</string>
+    <string name="convert">КОНВЕРТИРОВАТЬ</string>
+    <string name="to">В</string>
+    <string name="chooseUnitToConvertFrom">Выберите ед. изм. для конвертации</string>
+    <string name="chooseUnitToConvertTo">Выберите целевую ед. изм.</string>
+    <string-array name="categories">
+        <item>РАССТОЯНИЕ</item>
+        <item>МАССУ</item>
+        <item>СКОРОСТЬ</item>
+        <item>ПЛОЩАДЬ</item>
+        <item>ОБЪЕМ</item>
+        <item>ВРЕМЯ</item>
+        <item>ЭНЕРГИЮ</item>
+        <item>ДАННЫЕ</item>
+    </string-array>
+    <string-array name="length">
+        <item>КИЛОМЕТРЫ</item>
+        <item>МЕТРЫ</item>
+        <item>ДЕЦИМЕТРЫ</item>
+        <item>САНТИМЕТРЫ</item>
+        <item>МИЛЛИМЕТРЫ</item>
+        <item>МОРСКИЕ МИЛИ</item>
+        <item>МИЛИ</item>
+        <item>ЯРДЫ</item>
+        <item>ФУТЫ</item>
+        <item>ДЮЙМЫ</item>
+    </string-array>
+    <string-array name="mass">
+        <item>ТОННЫ</item>
+        <item>ЦЕНТНЕРЫ</item>
+        <item>СТОУНЫ</item>
+        <item>КИЛОГРАММЫ</item>
+        <item>ФУНТЫ</item>
+        <item>УНЦИИ</item>
+        <item>ГРАММЫ</item>
+        <item>МИЛЛИГРАММЫ</item>
+        <item>КАРАТЫ</item>
+    </string-array>
+    <string-array name="speed">
+        <item>КИЛОМЕТРЫ В ЧАС</item>
+        <item>МИЛИ В ЧАС</item>
+        <item>ФУТЫ В ЧАС</item>
+        <item>МЕТРЫ В СЕКУНДУ</item>
+        <item>УЗЛЫ</item>
+    </string-array>
+    <string-array name="area">
+        <item>КВ. КИЛОМЕТРЫ</item>
+        <item>ГЕКТАРЫ</item>
+        <item>АКРЫ</item>
+        <item>СОТКИ</item>
+        <item>КВ. МЕТРЫ</item>
+    </string-array>
+    <string-array name="volume">
+        <item>КУБОМЕТРЫ</item>
+        <item>ГАЛЛОНЫ</item>
+        <item>ГАЛЛОНЫ США</item>
+        <item>ЛИТРЫ</item>
+        <item>МИЛЛИЛИТРЫ</item>
+    </string-array>
+    <string-array name="time">
+        <item>ГОДЫ</item>
+        <item>МЕСЯЦЫ</item>
+        <item>НЕДЕЛИ</item>
+        <item>ДНИ</item>
+        <item>ЧАСЫ</item>
+        <item>МИНУТЫ</item>
+        <item>СЕКУНДЫ</item>
+        <item>МИЛЛИСЕКУНДЫ</item>
+    </string-array>
+    <string-array name="energy">
+        <item>МЕГАДЖОУЛИ</item>
+        <item>КИЛОДЖОУЛИ</item>
+        <item>ДЖОУЛИ</item>
+        <item>КИЛОКАЛОРИИ</item>
+        <item>КИЛОВАТТ-ЧАСЫ</item>
+    </string-array>
+    <string-array name="information">
+        <item>ПЕТАБАЙТЫ</item>
+        <item>ТЕРАБАЙТЫ</item>
+        <item>ГИГАБАЙТЫ</item>
+        <item>МЕГАБАЙТЫ</item>
+        <item>КИЛОБАЙТЫ</item>
+        <item>БАЙТЫ</item>
+        <item>БИТЫ</item>
+    </string-array>
+    <string name="maxValue">Достигнут лимит вводимого числа для этой операции!</string>
+</resources>

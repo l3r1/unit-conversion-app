@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:background="?attr/backgroundColor"
+        tools:context=".MainActivity">
+
+    <TextView
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/convert"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:textColor="?attr/colorPrimary"
+            android:id="@+id/convert" />
+
+    <Spinner
+            android:contentDescription="@string/chooseUnitToConvertFrom"
+            android:layout_width="396dp"
+            android:layout_height="33dp"
+            android:id="@+id/unitSelection"
+            android:minHeight="48dp"
+            android:minWidth="55dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:textAlignment="textEnd"
+            android:gravity="end" />
+
+    <Spinner
+            android:labelFor="@+id/editField"
+            android:contentDescription="@string/chooseUnitToConvertFrom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/convertFrom"
+            android:minHeight="48dp"
+            android:minWidth="125dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="center" />
+
+    <EditText
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:maxLength="20"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:digits="0123456789."
+            android:autofillHints=""
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="130dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:textColor="?attr/colorOnPrimary"
+            android:id="@+id/editField"
+            android:gravity="center" />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/to"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="185dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:textColor="?attr/colorPrimary"
+            android:id="@+id/to"
+            android:gravity="center" />
+
+    <Spinner
+            android:contentDescription="@string/chooseUnitToConvertTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/convertTo"
+            android:minHeight="48dp"
+            android:minWidth="125dp"
+            android:layout_marginTop="210dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="center" />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="250dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:textColor="?attr/colorOnPrimary"
+            android:id="@+id/resultField"
+            android:gravity="center" />
+
+
+</RelativeLayout>

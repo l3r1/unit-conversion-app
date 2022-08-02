@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">Unit Conversion</string>
+    <string name="convert">CONVERT</string>
+    <string name="to">TO</string>
+    <string name="chooseUnitToConvertFrom">Choose unit to convert</string>
+    <string name="chooseUnitToConvertTo">Choose unit to convert to</string>
+    <string-array name="categories">
+        <item>LENGTH</item>
+        <item>MASS</item>
+        <item>SPEED</item>
+        <item>AREA</item>
+        <item>VOLUME</item>
+        <item>TIME</item>
+        <item>ENERGY</item>
+        <item>INFORMATION</item>
+    </string-array>
+    <string-array name="length">
+        <item>KILOMETERS</item>
+        <item>METERS</item>
+        <item>DECIMETERS</item>
+        <item>CENTIMETERS</item>
+        <item>MILLIMETERS</item>
+        <item>NAUTICAL MILES</item>
+        <item>LAND MILES</item>
+        <item>YARDS</item>
+        <item>FEET</item>
+        <item>INCHES</item>
+    </string-array>
+    <string-array name="mass">
+        <item>TONNES</item>
+        <item>QUINTALS</item>
+        <item>STONES</item>
+        <item>KILOGRAMS</item>
+        <item>POUNDS</item>
+        <item>OUNCES</item>
+        <item>GRAMS</item>
+        <item>MILLIGRAMS</item>
+        <item>CARATS</item>
+    </string-array>
+    <string-array name="speed">
+        <item>KILOMETERS PER HOUR</item>
+        <item>MILES PER HOUR</item>
+        <item>FEET PER HOUR</item>
+        <item>METERS PER SECOND</item>
+        <item>KNOTS</item>
+    </string-array>
+    <string-array name="area">
+        <item>SQ KILOMETRES</item>
+        <item>HECTARES</item>
+        <item>ACRES</item>
+        <item>ARES</item>
+        <item>SQ METRES</item>
+    </string-array>
+    <string-array name="volume">
+        <item>CUBIC METERS</item>
+        <item>GALLONS</item>
+        <item>US GALLONS</item>
+        <item>LITRES</item>
+        <item>MILLILITRES</item>
+    </string-array>
+    <string-array name="time">
+        <item>YEARS</item>
+        <item>MONTHS</item>
+        <item>WEEKS</item>
+        <item>DAYS</item>
+        <item>HOURS</item>
+        <item>MINUTES </item>
+        <item>SECONDS</item>
+        <item>MILLISECONDS</item>
+    </string-array>
+    <string-array name="energy">
+        <item>MEGAJOULES</item>
+        <item>KILOJOULES</item>
+        <item>JOULES</item>
+        <item>KILOCALORIES</item>
+        <item>KILOWATT-HOURS</item>
+    </string-array>
+    <string-array name="information">
+        <item>PETABYTES</item>
+        <item>TERABYTES</item>
+        <item>GIGABYTES</item>
+        <item>MEGABYTES</item>
+        <item>KILOBYTES</item>
+        <item>BYTES</item>
+        <item>BITS</item>
+    </string-array>
+    <string name="maxValue">Maximum possible input reached for this conversion!</string>
+</resources>
