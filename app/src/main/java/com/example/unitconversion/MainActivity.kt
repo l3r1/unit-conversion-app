@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.unitconversion.databinding.ActivityMainBinding
 import java.math.BigDecimal
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     private var selectedFromCur = 0
     private var selectedToPrev = 0
     private var selectedToCur = 0
-    private var unitId = 0
+    private var unitId = R.array.length
 
     private companion object Converter {
 
@@ -34,9 +35,12 @@ class MainActivity : AppCompatActivity() {
             val styledTo = styleString(to)
 
             val toReturn =
-                input.setScale(15, BigDecimal.ROUND_HALF_DOWN) *
-                        getEnum(styledFrom) / getEnum(styledTo)
-            return toReturn.setScale(14, BigDecimal.ROUND_HALF_DOWN).stripTrailingZeros()
+                input.stripTrailingZeros()
+                    .multiply(getEnum(styledFrom)).stripTrailingZeros()
+                    .divide(getEnum(styledTo), 20, BigDecimal.ROUND_HALF_UP).stripTrailingZeros()
+            return toReturn
+                .setScale(5, BigDecimal.ROUND_HALF_UP)
+                .stripTrailingZeros()
                 .toPlainString()
         }
 
@@ -121,7 +125,8 @@ class MainActivity : AppCompatActivity() {
                 override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
 
                     resetFilter()
-                    val id = resources.getIdentifier(getLocale(p3.toInt(), true), "array", packageName)
+                    val id =
+                        resources.getIdentifier(getLocale(p3.toInt(), true), "array", packageName)
                     unitId = id
                     selectedToPrev = 0
                     selectedToCur = 0
@@ -202,6 +207,11 @@ class MainActivity : AppCompatActivity() {
                         getLocale(binding.convertFrom.selectedItemPosition, false),
                         getLocale(binding.convertTo.selectedItemPosition, false)
                     )
+                    if (text.length >= 20) {
+                        binding.editField.filters =
+                            arrayOf<InputFilter>(InputFilter.LengthFilter(binding.editField.text.length))
+                        Toast.makeText(applicationContext, R.string.maxValue, Toast.LENGTH_SHORT).show()
+                    }
                     binding.resultField.text = text
                 }
             }

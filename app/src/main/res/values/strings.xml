@@ -38,10 +38,10 @@
         <item>CARATS</item>
     </string-array>
     <string-array name="speed">
-        <item>KILOMETERS PER HOUR</item>
+        <item>KILOMETRES PER HOUR</item>
         <item>MILES PER HOUR</item>
         <item>FEET PER HOUR</item>
-        <item>METERS PER SECOND</item>
+        <item>METRES PER SECOND</item>
         <item>KNOTS</item>
     </string-array>
     <string-array name="area">
@@ -52,7 +52,7 @@
         <item>SQ METRES</item>
     </string-array>
     <string-array name="volume">
-        <item>CUBIC METERS</item>
+        <item>CUBIC METRES</item>
         <item>GALLONS</item>
         <item>US GALLONS</item>
         <item>LITRES</item>
