@@ -49,14 +49,14 @@ enum class Enums(val value: BigDecimal) {
     MILLILITRES(BigDecimal("0.001")),
 
     //time
-    YEARS(BigDecimal("365.0")),
-    MONTHS(BigDecimal("30.0")),
-    WEEKS(BigDecimal("7.0")),
-    DAYS(BigDecimal("1.0")),
-    HOURS(BigDecimal("0.0417")),
-    MINUTES(BigDecimal("0.000694")),
-    SECONDS(BigDecimal("0.000011574")),
-    MILLISECONDS(BigDecimal("0.000000011574")),
+    YEARS(BigDecimal("31536000.0")),
+    MONTHS(BigDecimal("2628000.0")),
+    WEEKS(BigDecimal("604800.0")),
+    DAYS(BigDecimal("86400.0")),
+    HOURS(BigDecimal("3600.0")),
+    MINUTES(BigDecimal("60.0")),
+    SECONDS(BigDecimal("1.0")),
+    MILLISECONDS(BigDecimal("0.001")),
 
     //energy
     MEGAJOULES(BigDecimal("1000000.0")),

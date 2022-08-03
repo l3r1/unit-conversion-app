@@ -27,19 +27,24 @@ class MainActivity : AppCompatActivity() {
 
         private fun convert(input: BigDecimal, from: String, to: String): String {
 
-            if (from == to) {
+            if (from == to || input == BigDecimal.ZERO) {
                 return input.stripTrailingZeros().toPlainString()
             }
 
-            val styledFrom = styleString(from)
-            val styledTo = styleString(to)
+            val styledFrom = getEnum(styleString(from))
+            val styledTo = getEnum(styleString(to))
 
             val toReturn =
                 input.stripTrailingZeros()
-                    .multiply(getEnum(styledFrom)).stripTrailingZeros()
-                    .divide(getEnum(styledTo), 20, BigDecimal.ROUND_HALF_UP).stripTrailingZeros()
-            return toReturn
-                .setScale(5, BigDecimal.ROUND_HALF_UP)
+                    .multiply(styledFrom).stripTrailingZeros()
+                    .divide((styledTo), 20, BigDecimal.ROUND_HALF_UP)
+                    .stripTrailingZeros()
+            return if (toReturn.movePointRight(3) >= BigDecimal.ONE)
+                toReturn.setScale(3, BigDecimal.ROUND_HALF_UP)
+                    .stripTrailingZeros()
+                    .toPlainString()
+            else toReturn
+                .setScale(20, BigDecimal.ROUND_HALF_UP)
                 .stripTrailingZeros()
                 .toPlainString()
         }
@@ -64,6 +69,7 @@ class MainActivity : AppCompatActivity() {
                 style(str, "-")
             else str
         }
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -157,7 +163,7 @@ class MainActivity : AppCompatActivity() {
                     binding.resultField.text = convert(
                         BigDecimal(binding.editField.text.toString()),
                         getLocale(binding.convertFrom.selectedItemPosition, false),
-                        getLocale(binding.convertTo.selectedItemPosition, false)
+                        getLocale(binding.convertTo.selectedItemPosition, false),
                     )
                 }
             }
@@ -180,7 +186,7 @@ class MainActivity : AppCompatActivity() {
                     binding.resultField.text = convert(
                         BigDecimal(binding.editField.text.toString()),
                         getLocale(binding.convertFrom.selectedItemPosition, false),
-                        getLocale(binding.convertTo.selectedItemPosition, false)
+                        getLocale(binding.convertTo.selectedItemPosition, false),
                     )
                 }
             }
@@ -205,17 +211,17 @@ class MainActivity : AppCompatActivity() {
                     val text = convert(
                         BigDecimal(p0.toString()),
                         getLocale(binding.convertFrom.selectedItemPosition, false),
-                        getLocale(binding.convertTo.selectedItemPosition, false)
+                        getLocale(binding.convertTo.selectedItemPosition, false),
                     )
-                    if (text.length >= 20) {
+                    if (text.length >= 40) {
                         binding.editField.filters =
                             arrayOf<InputFilter>(InputFilter.LengthFilter(binding.editField.text.length))
-                        Toast.makeText(applicationContext, R.string.maxValue, Toast.LENGTH_SHORT).show()
+                        Toast.makeText(applicationContext, R.string.maxValue, Toast.LENGTH_SHORT)
+                            .show()
                     }
                     binding.resultField.text = text
                 }
             }
         })
     }
-
 }
