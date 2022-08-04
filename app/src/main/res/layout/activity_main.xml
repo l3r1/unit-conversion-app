@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         android:background="?attr/backgroundColor"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:id="@+id/layout">
 
     <TextView
             android:gravity="center"
@@ -22,7 +26,6 @@
             android:id="@+id/convert" />
 
     <Spinner
-            android:contentDescription="@string/chooseUnitToConvertFrom"
             android:layout_width="396dp"
             android:layout_height="33dp"
             android:id="@+id/unitSelection"
@@ -36,7 +39,6 @@
 
     <Spinner
             android:labelFor="@+id/editField"
-            android:contentDescription="@string/chooseUnitToConvertFrom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/convertFrom"
@@ -80,7 +82,6 @@
             android:gravity="center" />
 
     <Spinner
-            android:contentDescription="@string/chooseUnitToConvertTo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/convertTo"
@@ -107,6 +108,17 @@
             android:textColor="?attr/colorOnPrimary"
             android:id="@+id/resultField"
             android:gravity="center" />
+
+    <ImageButton
+            android:layout_alignParentBottom="true"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/star"
+            android:id="@+id/favorites"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:contentDescription="@string/favorites" />
 
 
 </RelativeLayout>

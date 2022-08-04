@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Конвертация единиц измерения</string>
     <string name="convert">КОНВЕРТИРОВАТЬ</string>
     <string name="to">В</string>
-    <string name="chooseUnitToConvertFrom">Выберите ед. изм. для конвертации</string>
-    <string name="chooseUnitToConvertTo">Выберите целевую ед. изм.</string>
     <string-array name="categories">
         <item>РАССТОЯНИЕ</item>
         <item>МАССУ</item>
@@ -86,4 +83,6 @@
         <item>БИТЫ</item>
     </string-array>
     <string name="maxValue">Достигнут лимит вводимого числа для этой операции!</string>
+    <string name="favorites">Избранное</string>
+    <string name="swipeHint">Список избранного доступен по свайпу вправо</string>
 </resources>
