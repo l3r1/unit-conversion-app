@@ -98,7 +98,7 @@ class MainActivity : AppCompatActivity() {
                         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
                         binding.unitSelection.adapter = adapter
 
-                        if (Locale.getDefault().language != "en") {
+                        if (Locale.getDefault().language == "ru") {
                             val param =
                                 binding.unitSelection.layoutParams as ViewGroup.MarginLayoutParams
                             param.setMargins(0, 125, 0, 0)
@@ -287,6 +287,13 @@ class MainActivity : AppCompatActivity() {
                 prefs.edit().remove(name).apply()
                 binding.favorites.setImageResource(R.drawable.star)
             }
+        }
+
+        binding.favorites.setOnLongClickListener {
+
+            prefs.edit().clear().apply()
+            binding.favorites.setImageResource(R.drawable.star)
+            return@setOnLongClickListener true
         }
 
         binding.layout.setOnTouchListener(

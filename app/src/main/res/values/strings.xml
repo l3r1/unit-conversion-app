@@ -126,5 +126,6 @@
     </string-array>
     <string name="maxValue">Maximum possible input reached for this conversion!</string>
     <string name="favorites">Favorites</string>
-    <string name="swipeHint">Swipe right to access favorites</string>
+    <string name="swipeHint">Swipe right to access favorites.
+        Long press the star to clear all favorites.</string>
 </resources>

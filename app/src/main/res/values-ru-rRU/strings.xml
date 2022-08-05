@@ -126,6 +126,7 @@
     </string-array>
     <string name="maxValue">Достигнут лимит вводимого числа для этой операции!</string>
     <string name="favorites">Избранное</string>
-    <string name="swipeHint">Список избранного доступен по свайпу вправо</string>
+    <string name="swipeHint">Список избранного доступен по свайпу вправо.
+    Его можно полностью очистить долгим нажатием на звёздочку.</string>
     <string name="app_name">Конвертация величин</string>
 </resources>

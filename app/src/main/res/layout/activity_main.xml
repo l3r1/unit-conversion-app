@@ -111,6 +111,7 @@
 
     <ImageButton
             android:layout_alignParentBottom="true"
+            android:longClickable="true"
             android:background="@null"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
