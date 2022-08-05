@@ -8,5 +8,5 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:textColor="?attr/colorPrimary"
-        android:textSize="24sp">
+        android:textSize="20sp">
 </TextView>

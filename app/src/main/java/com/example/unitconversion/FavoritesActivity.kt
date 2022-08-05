@@ -35,9 +35,9 @@ class FavoritesActivity : AppCompatActivity() {
                 val from = ctx.resources.getStringArray(split[0].toInt())[split[2].toInt()]
                 val to = ctx.resources.getStringArray(split[0].toInt())[split[3].toInt()]
 
-                val name = from.lowercase().replaceFirstChar { c -> c.uppercase() } +
+                val name = from +
                         " ->\n" +
-                        to.lowercase().replaceFirstChar { c -> c.uppercase() }
+                        to
                 localizedNames.add(name)
             }
             return localizedNames
