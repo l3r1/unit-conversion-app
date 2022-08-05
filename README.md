@@ -6,9 +6,8 @@ Android app for converting various units of measurement. Easily expandable, make
 
 Features:
 * Converts from one unit to anoher on the fly
-* Russian and English localizations
+* Wide selection of units and categories to convert to and from
+* Saving conversion pairs to favorites
 * Easy scalability
 * Light and dark themes
-
-Screenshots:
-TODO!
+* Russian and English localizations
