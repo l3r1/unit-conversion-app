@@ -8,49 +8,58 @@ import android.view.LayoutInflater
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import com.example.unitconversion.databinding.ActivityFavoritesBinding
+import java.util.*
 
 class FavoritesActivity : AppCompatActivity() {
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
 
+
         super.onCreate(savedInstanceState)
         val binding = ActivityFavoritesBinding.inflate(LayoutInflater.from(this@FavoritesActivity))
+        val prefs = getSharedPreferences(this.packageName, Context.MODE_PRIVATE)
         setContentView(binding.root)
 
-        fun getLocale(list: MutableList<String>) {
+        fun getLocale(list: MutableList<String>): MutableList<String> {
 
-//            val conf = resources.configuration
-//            val locale = conf.locales[0]
-//            createConfigurationContext(resources.configuration)
-//            return if (cat) {
-//                createConfigurationContext(conf).resources.getStringArray(R.array.categories)[id].lowercase()
-//            } else {
-//                createConfigurationContext(conf).resources.getStringArray(unitID)[id]
-//            }
+            val conf = resources.configuration
+            conf.setLocale(Locale.getDefault())
+            val ctx = createConfigurationContext(conf)
+
+            val localizedNames = mutableListOf<String>()
+
+            for (item in list) {
+
+                val split = item.split("-")
+                val from = ctx.resources.getStringArray(split[0].toInt())[split[2].toInt()]
+                val to = ctx.resources.getStringArray(split[0].toInt())[split[3].toInt()]
+
+                val name = from.lowercase().replaceFirstChar { c -> c.uppercase() } +
+                        " ->\n" +
+                        to.lowercase().replaceFirstChar { c -> c.uppercase() }
+                localizedNames.add(name)
+            }
+            return localizedNames
         }
 
-        val prefs = getSharedPreferences(this.packageName, Context.MODE_PRIVATE)
-        val names = mutableListOf<String>()
+        val keys = prefs.all.keys.toMutableList()
+        val names = getLocale(keys)
 
-        for (p in prefs.all) {
-            names.add(p.key.toString())
-        }
-        getLocale(names)
+        binding.favoritesSelection.setOnItemClickListener { _, _, position, _ ->
 
-        binding.favoritesSelection.setOnItemClickListener { parent, view, position, id ->
-
-            val element = parent.getItemAtPosition(position)
+            val element = keys[position]
             val intent = Intent(this, MainActivity::class.java)
             intent.putExtra("favorite", true)
             intent.putExtra("data", element.toString())
             startActivity(intent)
         }
 
-        val adapter = ArrayAdapter<String>(this, R.layout.list_items, names)
+        val adapter = ArrayAdapter(this, R.layout.list_items, names)
         binding.favoritesSelection.adapter = adapter
 
-        binding.favoritesSelection.setOnTouchListener(object : OnSwipeListener(this@FavoritesActivity) {
+        binding.favoritesSelection.setOnTouchListener(object :
+            OnSwipeListener(this@FavoritesActivity) {
 
             override fun onSwipeLeft() {
                 val i = Intent(this@FavoritesActivity, MainActivity::class.java)

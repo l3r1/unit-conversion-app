@@ -1,15 +1,18 @@
 <resources>
-    <string name="app_name" translatable="false">Unit Conversion</string>
+    <string name="app_name">Unit Conversion</string>
     <string name="convert">CONVERT</string>
     <string name="to">TO</string>
     <string-array name="categories">
         <item>LENGTH</item>
         <item>MASS</item>
         <item>SPEED</item>
+        <item>ACCELERATION</item>
+        <item>FORCE</item>
         <item>AREA</item>
         <item>VOLUME</item>
         <item>TIME</item>
         <item>ENERGY</item>
+        <item>POWER</item>
         <item>INFORMATION</item>
     </string-array>
     <string-array name="length">
@@ -23,6 +26,10 @@
         <item>YARDS</item>
         <item>FEET</item>
         <item>INCHES</item>
+        <item>LIGHT YEARS</item>
+        <item>VERSTAS</item>
+        <item>SAZHENS</item>
+        <item>ARSHINS</item>
     </string-array>
     <string-array name="mass">
         <item>TONNES</item>
@@ -41,20 +48,44 @@
         <item>FEET PER HOUR</item>
         <item>METRES PER SECOND</item>
         <item>KNOTS</item>
+        <item>SPEED OF LIGHT</item>
+        <item>SPEED OF SOUND</item>
+        <item>EARTH ORBITAL SPEED</item>
+        <item>SUN ORBITAL SPEED</item>
+    </string-array>
+    <string-array name="acceleration">
+        <item>METERS PER SQ SECOND</item>
+        <item>FEET PER SQ SECOND</item>
+        <item>CENTIMETERS PER SQ SECOND</item>
+        <item>GRAVITATIONAL ACCELERATION</item>
+    </string-array>
+    <string-array name="force">
+        <item>NEWTONS</item>
+        <item>DYNES</item>
+        <item>KILOPONDS</item>
+        <item>POUND-FORCES</item>
+        <item>POUNDALS</item>
     </string-array>
     <string-array name="area">
+        <item>SQ MILES</item>
         <item>SQ KILOMETRES</item>
         <item>HECTARES</item>
         <item>ACRES</item>
         <item>ARES</item>
         <item>SQ METRES</item>
+        <item>FOOTBALL PITCHES</item>
+        <item>DESSIATINS</item>
     </string-array>
     <string-array name="volume">
         <item>CUBIC METRES</item>
-        <item>GALLONS</item>
-        <item>US GALLONS</item>
+        <item>CUBIC FEET</item>
         <item>LITRES</item>
         <item>MILLILITRES</item>
+        <item>GALLONS</item>
+        <item>US GALLONS</item>
+        <item>PINTS</item>
+        <item>US PINTS</item>
+        <item>BARRELS</item>
     </string-array>
     <string-array name="time">
         <item>YEARS</item>
@@ -72,6 +103,17 @@
         <item>JOULES</item>
         <item>KILOCALORIES</item>
         <item>KILOWATT-HOURS</item>
+        <item>KILOGRAM-FORCE-METERS</item>
+        <item>MEGATONS</item>
+        <item>KILOTONS</item>
+    </string-array>
+    <string-array name="power">
+        <item>GIGAWATTS</item>
+        <item>MEGAWATTS</item>
+        <item>KILOWATTS</item>
+        <item>WATTS</item>
+        <item>HORSEPOWERS</item>
+        <item>KILOCALORIES PER HOUR</item>
     </string-array>
     <string-array name="information">
         <item>PETABYTES</item>

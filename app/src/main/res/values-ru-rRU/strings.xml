@@ -6,10 +6,13 @@
         <item>РАССТОЯНИЕ</item>
         <item>МАССУ</item>
         <item>СКОРОСТЬ</item>
+        <item>УСКОРЕНИЕ</item>
+        <item>СИЛУ</item>
         <item>ПЛОЩАДЬ</item>
         <item>ОБЪЕМ</item>
         <item>ВРЕМЯ</item>
         <item>ЭНЕРГИЮ</item>
+        <item>МОЩНОСТЬ</item>
         <item>ДАННЫЕ</item>
     </string-array>
     <string-array name="length">
@@ -23,6 +26,10 @@
         <item>ЯРДЫ</item>
         <item>ФУТЫ</item>
         <item>ДЮЙМЫ</item>
+        <item>СВЕТОВЫЕ ГОДЫ</item>
+        <item>ВЁРСТЫ</item>
+        <item>САЖЕНИ</item>
+        <item>АРШИНЫ</item>
     </string-array>
     <string-array name="mass">
         <item>ТОННЫ</item>
@@ -41,20 +48,44 @@
         <item>ФУТЫ В ЧАС</item>
         <item>МЕТРЫ В СЕКУНДУ</item>
         <item>УЗЛЫ</item>
+        <item>СКОРОСТЬ СВЕТА</item>
+        <item>СКОРОСТЬ ЗВУКА</item>
+        <item>ОРБИТАЛЬНАЯ СКОРОСТЬ ЗЕМЛИ</item>
+        <item>ОРБИТАЛЬНАЯ СКОРОСТЬ СОЛНЦА</item>
+    </string-array>
+    <string-array name="acceleration">
+        <item>МЕТРЫ НА КВ. СЕКУНДУ</item>
+        <item>ФУТЫ НА КВ. СЕКУНДУ</item>
+        <item>САНТИМЕТРЫ НА КВ. СЕКУНДУ</item>
+        <item>УСКОРЕНИЕ СВОБОДНОГО ПАДЕНИЯ</item>
+    </string-array>
+    <string-array name="force">
+        <item>НЬЮТОНЫ</item>
+        <item>ДИНЫ</item>
+        <item>КИЛОГРАММ-СИЛЫ</item>
+        <item>ФУНТ-СИЛЫ</item>
+        <item>ПАУНДАЛИ</item>
     </string-array>
     <string-array name="area">
+        <item>КВ. МИЛИ</item>
         <item>КВ. КИЛОМЕТРЫ</item>
         <item>ГЕКТАРЫ</item>
         <item>АКРЫ</item>
         <item>СОТКИ</item>
         <item>КВ. МЕТРЫ</item>
+        <item>ФУТБОЛЬНЫЕ ПОЛЯ</item>
+        <item>ДЕСЯТИНЫ</item>
     </string-array>
     <string-array name="volume">
         <item>КУБОМЕТРЫ</item>
-        <item>ГАЛЛОНЫ</item>
-        <item>ГАЛЛОНЫ США</item>
+        <item>КУБОФУТЫ</item>
         <item>ЛИТРЫ</item>
         <item>МИЛЛИЛИТРЫ</item>
+        <item>ГАЛЛОНЫ</item>
+        <item>ГАЛЛОНЫ США</item>
+        <item>ПИНТЫ</item>
+        <item>ПИНТЫ США</item>
+        <item>БАРРЕЛИ</item>
     </string-array>
     <string-array name="time">
         <item>ГОДЫ</item>
@@ -72,6 +103,17 @@
         <item>ДЖОУЛИ</item>
         <item>КИЛОКАЛОРИИ</item>
         <item>КИЛОВАТТ-ЧАСЫ</item>
+        <item>КИЛОГРАММ-СИЛА-МЕТРЫ</item>
+        <item>МЕГАТОННЫ</item>
+        <item>КИЛОТОННЫ</item>
+    </string-array>
+    <string-array name="power">
+        <item>ГИГАВАТТЫ</item>
+        <item>МЕГАВАТТЫ</item>
+        <item>КИЛОВАТТЫ</item>
+        <item>ВАТТЫ</item>
+        <item>ЛОШАДИНЫЕ СИЛЫ</item>
+        <item>КИЛОКАЛОРИИ В ЧАС</item>
     </string-array>
     <string-array name="information">
         <item>ПЕТАБАЙТЫ</item>
@@ -85,4 +127,5 @@
     <string name="maxValue">Достигнут лимит вводимого числа для этой операции!</string>
     <string name="favorites">Избранное</string>
     <string name="swipeHint">Список избранного доступен по свайпу вправо</string>
+    <string name="app_name">Конвертация величин</string>
 </resources>

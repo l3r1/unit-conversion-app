@@ -11,4 +11,5 @@
     <color name="betterWhite">#EBEBEB</color>
     <color name="orange">#D84315</color>
     <color name="blue">#283593</color>
+    <color name="selectableBacground">#000000</color>
 </resources>
