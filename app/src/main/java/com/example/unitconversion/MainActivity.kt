@@ -245,6 +245,7 @@ class MainActivity : AppCompatActivity() {
 
                 override fun afterTextChanged(p0: Editable?) {
                     if (p0.isNullOrBlank()) binding.resultField.text = ""
+                    else if (!p0.matches("^\\d+\\.?\\d*\$".toRegex())) p0.delete(p0.length - 1, p0.length)
                 }
 
                 override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
